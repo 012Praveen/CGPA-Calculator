@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CGPA_CALCULATOR</title>
+        <style>
+          body{
+            background-image: url(cgpa.jpg);
+            background-repeat: no-repeat;
+           
+          }
+            .cal{
+                background-color: rgb(245, 245, 245,0.1);
+                border: solid;
+                margin-top: 50px;
+                margin-left: 150px;
+                margin-right: 150px;
+                padding left:50px;
+                padding right: 50px;
+                padding top: 50px;
+                padding down:50x;
+                text-align:center;
+     
+            }
+            .mar{
+                background-color:rgb(245, 245, 245,0.5);
+                border: solid;
+                margin-top: 50px;
+                margin-left: 150px;
+                margin-right: 150px;
+                text-align: center;
+               
+            }
+            button{
+                text-align: center;
+                margin-top: 50px;
+                margin-left: 150px;
+                width: 250px;
+                height: 50px;
+                border: solid;
+                font-size: larger;
+            }
+            .mar input{
+                margin-top: 20px;
+                margin-bottom: 10px;
+                background-color:rgb(245, 222, 179,0.9);
+            }
+            P{
+                border: solid;
+                margin-top: 30PX;
+                margin-left: 150px;
+                margin-right: 1050px;
+                background-color: white;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+       
+        <div class="cal">
+        <h1>CGPA_CALCULATOR</h1>
+        </div>
+        <div class="mar">
+           <b> ENTER THE TOTAL NUMBER OF S GRADES : </b><input type="text"id="sgrade"><br>
+           <b>ENTER THE TOTAL NUMBER OF A GRADES : </b><input type="text"id="agrade"><br>
+           <b> ENTER THE TOTAL NUMBER OF B GRADES : </b><input type="text"id="bgrade"><br>
+           <b> ENTER THE TOTAL NUMBER OF C GRADES : </b><input type="text"id="cgrade"><br>
+           <b> ENTER THE TOTAL NUMBER OF D GRADES : </b><input type="text"id="dgrade"><br>
+           <b> ENTER THE TOTAL NUMBER OF E GRADES : </b><input type="text"id="egrade"><br>
+           <b> ENTER THE TOTAL NUMBER OF SUBJECTS : </b><input type="text"id="subject"name="total"><br>
+        </div>
+        <div class="ent">
+            <Button onclick="cgp_calculator()">ENTER</Button>
+        </div>
+       <p id="result">CGPA :</p>
+       <script>
+        function cgp_calculator(){
+        var sg=document.getElementById("sgrade").value;
+        var ag=document.getElementById("agrade").value;
+        var bg=document.getElementById("bgrade").value;
+        var cg=document.getElementById("cgrade").value;
+        var dg=document.getElementById("dgrade").value;
+        var eg=document.getElementById("egrade").value;
+        var total=document.getElementById("subject").value;
+        var s=10*sg;
+        var a=9*ag;
+        var b=8*bg;
+        var c=7*cg;
+        var d=6*dg;
+        var e=5*eg;
+        var result=(s+a+b+c+d+e)/total;
+        document.getElementById('result').innerText=" CGPA : "+result;
+
+       
+
+        }
+       </script>
+    </body>
+</html>
